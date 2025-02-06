@@ -1,0 +1,13 @@
+    8  git clone https://github.com/GuadalupeRamirezLara/CS131.git
+  118  cd ~
+  119  pwd
+  122  id
+  123  ls /proc/ | grep mem
+  124  ls /proc/ | grep cpu
+  125  head /proc/meminfo
+  126  head /proc/cpuinfo
+  127  cat /proc/cpuinfo
+  128  uname -a
+  129  uname -m
+  133  cat /etc/os-release
+  156  history > cmds.log

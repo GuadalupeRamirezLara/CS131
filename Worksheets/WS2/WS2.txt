@@ -1,0 +1,29 @@
+2) What is your home directory path?  How did you find out (commands used)?
+	- /home/guadalupe_ramirezlara
+	- Commands: cd ~, pwd
+3) What is your UID?  To what group(s) do you belong?  How did you find out (command used)?
+	- UID: uid=1001(guadalupe_ramirezlara)
+	- Groups: groups=1002(guadalupe_ramirezlara)
+	- Command: id
+4) Using only "ls" (and maybe "grep"), can you find out which file under directory /proc/ contains information about memory (mem) on your server? Which file contains information about the CPU's on your server?
+	- File about memory: iomem, meminfo
+	- Command: ls /proc/ | grep mem
+	- File about CPU: cpuinfo
+	- Command: ls /proc/ | grep cpu
+5) Use head to check the memory information file you found above. How much total memory is on your server?
+	- Total memory on server: MemTotal:         976892 kB
+	- Free memory on server: MemFree:          511244 kB
+	- Available memory on server: MemAvailable:     659716 kB
+	- Command: head /proc/meminfo
+6) Then use head, tail, cat to check the cpu information file you found above. How many processors are on your server? What is the processor architecture name? What is the processor speed in GHz?
+	- Processors on server: 0
+	- Processor architecture name: x86_64 
+	- Model name: Intel(R) Xeon(R) CPU @ 2.20GHz
+	- Processor speed: cpu MHz : 2199.998
+	- Commands: head /proc/cpuinfo, uname -m, cat /proc/cpuinfo
+7) Identify the operating system version. Which file under /etc/ contains this information?
+	- Operating system version: NAME="Ubuntu” VERSION="20.04.6 LTS (Focal Fossa)"
+	- File containing information: os-release
+	- Command: cat /etc/os-release
+
+
