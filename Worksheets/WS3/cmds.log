@@ -1,0 +1,6 @@
+    8  git clone https://github.com/GuadalupeRamirezLara/CS131.git
+  292  cd CS131
+  294  grep "2019-01-02" 2019-01-h1.csv | sort -h | uniq | head -3
+  299  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f8 | sort | uniq -c | sort -nr | head -3
+  309  grep "2019-01-10" 2019-01-h1.csv | cut -d, -f8 | sort | uniq -c | sort -nr | head -3
+  318  history > cmds.log
