@@ -1,0 +1,40 @@
+    8  git clone https://github.com/GuadalupeRamirezLara/CS131.git
+  459  cd CS131
+  460  ls
+  461  mkdir a1
+  462  ls
+  463  cd a1
+  464  touch cmds.log
+  465  ls
+  466  touch a1.txt
+  467  ls
+  468  cd ..
+  469  vim ~/.bashrc
+  470  cat .bashrc
+  471  l
+  472  w
+  473  cd CS131
+  474  ls
+  475  cd a1
+  476  mkdir FARE
+  477  ls
+  478  cd ..
+  479  head -n 5 2019-01-h1.csv
+  480  cd CS131
+  481  ls
+  490  grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/151.0-246.0.txt
+  497  grep '^.*,193.0,239.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/193.0-239.0.txt
+  498  cd a1
+  499  cd FARE
+  501  cd ..
+  509  sum=$(paste -sd+ FARE/151.0-246.0.txt | bc)
+  510  count=$(wc -l < FARE/151.0-246.0.txt)
+  511  mean=$(echo "$sum / $count" | bc -l)
+  512  echo "FARE/151.0-246.0.txt: $mean" >> a1.txt
+  516  sum=$(paste -sd+ FARE/193.0-239.0.txt | bc)
+  517  count=$(wc -l < FARE/193.0-239.0.txt)
+  518  mean=$(echo "$sum / $count" | bc -l)
+  519  echo "FARE/193.0-239.0.txt: $mean" >> a1.txt
+  539  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f18 | sort | uniq -c | sort -nr | head
+  562  grep ',[3-9]\.[0-9]*,' 2019-01-h1.csv | cut -d',' -f9 | sort | uniq -c | sort -nr | head -10
+  566  history > a1/cdms.log

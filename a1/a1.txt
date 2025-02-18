@@ -1,0 +1,70 @@
+Task 1:
+1a) Write an alias called "l" for "ls -ltr" to display the files in the current directory in a list format and reverse chronologically ordered as a short name.
+1b) Write an alias called "w" for "ls -l | wc" to display the number of files in the current directory as a short name.
+Execute the alias commands (l and w) to show it's working.
+Commands:
+        vim ~/.bashrc
+        l
+        w
+Output:
+	The first command opened the .bashrc file, where I wrote in the aliases.
+	FARE/  a1.txt  cdms.log  cmds.log
+	5      38     343
+
+
+
+Task 2:
+2a) Create a directory FARE under a1 directory with mkdir.
+Command:
+	mkdir FARE
+Output:
+	The command added a directory to my a1 directory.
+
+2b) For each pair of locations, redirect the fare amount (fare_amount) to a file named FARE/[pulocationid]-[dolocationid].txt (replace pulocationid and dolocationid with the location IDs you selected.
+Commands:
+	grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/151.0-246.0.txt
+	grep '^.*,193.0,239.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/193.0-239.0.txt
+Output:
+	I chose the pickup location 151.0 and drop off location 246.0 for my first pair.
+	The output was a file named 151.0-246.0.txt inside the FARE directory with the expected output inside.
+
+	I chose the pickup location 151.0 and drop off location 246.0 for my first pair.
+        The output was a file named 193.0-239.0.txt inside the FARE directory with the expected output inside.
+
+2c) Compute the mean (average) of the fare amounts in each file (separately). (This result should be saved into a text file named "a1.txt".)
+Commands:
+	sum=$(paste -sd+ FARE/151.0-246.0.txt | bc)
+	count=$(wc -l < FARE/151.0-246.0.txt)
+	mean=$(echo "$sum / $count" | bc -l)
+	echo "FARE/151.0-246.0.txt: $mean" >> a1.txt
+
+	sum=$(paste -sd+ FARE/193.0-239.0.txt | bc)
+	count=$(wc -l < FARE/193.0-239.0.txt)
+	mean=$(echo "$sum / $count" | bc -l)
+	echo "FARE/193.0-239.0.txt: $mean" >> a1.txt
+Output:
+	The file a1.txt now had the text output: FARE/151.0-246.0.txt FARE/151.0-246.0.txt: 16.07359307359307359307
+	The file a1.txt now had the text output: FARE/151.0-246.0.txt:FARE/193.0-239.0.txt: 15.50000000000000000000
+
+2d) What was the highest total amount paid by customers who were picked up on January 10, 2019? 
+Command:
+	grep "2019-01-02" 2019-01-h1.csv | cut -d, -f18 | sort | uniq -c | sort -nr | head
+Output:
+	199319
+ 
+2e) Among the rides with three or more customers, identify the 10 most popular dropoff locations in the dataset.
+Command:
+	grep ',[3-9]\.[0-9]*,' 2019-01-h1.csv | cut -d',' -f9 | sort | uniq -c | sort -nr | head -10
+Output:
+	137960 236.0
+	119543 237.0
+	114422 161.0
+	96663 170.0
+	92935 230.0
+	90666 162.0
+	85884 142.0
+	85118 48.0
+	84413 239.0
+	83480 141.0
+
+
