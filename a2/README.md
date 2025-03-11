@@ -20,6 +20,7 @@ This command only works to check the updates of a file already being tracked wit
 
 # added README.md to staging area for first time
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git add README.md
+# check status
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git status
 On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
@@ -44,41 +45,46 @@ Untracked files:
 
 # edit README.md after first time adding it to git
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
-
-# call the shell tool
-guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$  ./gitauto.sh ..
+# call shell tool to stage and commit edits
+guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ ./gitauto.sh ..
 CHECKING: repo updates...
 NEW: updates found.
 AUTO-COMMIT: committing a2/README.md updates
-[main 5f8386a] auto-committing updates for: a2/README.md
- 1 file changed, 16 insertions(+)
- create mode 100644 a2/README.md
+[main 5840344] auto-committing updates for: a2/README.md
+ 17 files changed, 1323 insertions(+), 32 deletions(-)
+ create mode 100644 .gitignore
+ create mode 160000 Worksheets/WS2/CS131
+ create mode 100755 a2/gitauto.sh
+ create mode 100644 cdms.log
+ create mode 100644 cmds.log
+ create mode 100755 gitauto
+ create mode 100644 sample1.txt
+ create mode 100644 sample1/README.md
+ create mode 100644 sample1/awkfile
+ create mode 100644 sample1/file.html
+ create mode 100644 sample1/long.sh
+ create mode 100644 sample1/newfile.html
+ create mode 100755 sample1/sample
+ create mode 100644 sample1/sample.html
+ create mode 100644 sorted_data.txt
+ create mode 100644 temp2/sample.txt
 AUTO-COMMIT: committed a2/README.md updates
 LATEST: updates committed. Ready to push.
-
-# checking git status for new commit (added a commit, ready to push)
+# edit again (new)
+guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
+guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ ./gitauto.sh ..
+CHECKING: repo updates...
+NEW: updates found.
+AUTO-COMMIT: committing all updates
+[main 58fea40] auto-committed all updates
+ 1 file changed, 5 insertions(+), 11 deletions(-)
+AUTO-COMMIT: committed all updates
+LATEST: updates committed. Ready to push.
+# check git status
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git status
 On branch main
 Your branch is ahead of 'origin/main' by 2 commits.
   (use "git push" to publish your local commits)
 
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   README.md
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        ../.gitignore
-        ../Worksheets/WS2/CS131/
-        gitauto.sh
-        ../cdms.log
-        ../cmds.log
-        ../gitauto
-        ../sample1.txt
-        ../sample1/
-        ../sorted_data.txt
-        ../temp2/
-
-no changes added to commit (use "git add" and/or "git commit -a")
-guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ 
+nothing to commit, working tree clean
+guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$  
