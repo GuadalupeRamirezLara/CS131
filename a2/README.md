@@ -1,4 +1,5 @@
 # README for A2-Mini Project: gitauto.sh
+Author: Guadalupe Ramirez Lara
 
 ## Brief explanation:
 My shell tool "gitauto.sh" is meant to make maintaining your git repo up-to-date a bit easier.

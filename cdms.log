@@ -1,0 +1,586 @@
+    1  ls
+    2  gcloud compute os-login ssh-keys add    --key-file=Users/lupitalara22/.ssh/cs131ssh-key.pub
+    3  ls -lt
+    4  ssh -i Users/lupitalara22/.ssh/cs131ssh-key guadalupe_ramirezlara 34.19.70.13
+    5  gcloud compute project-info describe  --format="value(commonInstanceMetadata[items][ssh-keys])"
+    6  compute.projects.setCommonInstanceMetadata
+    7  ls
+    8  git clone https://github.com/GuadalupeRamirezLara/CS131.git
+    9  ls
+   10  cd cs131
+   11  cd CS131
+   12  cat README.md
+   13  mkdir sample1
+   14  ls
+   15  cd sample1
+   16  ls
+   17  vim abc.txt
+   18  cat abc.txt
+   19  uniq abc.txt'
+   20  abc.txt q
+   21  :q
+   22  q
+   23  :q
+   24  cd CS131
+   25  cd sample1
+   26  ls
+   27  sort abc.txt
+   28  sort abc.txt > sorted_data.txt
+   29  ls
+   30  cat sorted_data.txt
+   31  ls
+   32  ls > sorted_data.txt
+   33  ls
+   34  cat
+   35  cd CS131
+   36  ls
+   37  mkdir temp2
+   38  ls
+   39  cd temp2/
+   40  touch sample.txt
+   41  cd ..
+   42  ls
+   43  ls 1> sorted_data.txt
+   44  cat sorted_data.txt
+   45  ls > /dev/null
+   46  cat /dev/null
+   47  cat
+   48  cat < abc.txt
+   49  cd sample1
+   50  ls
+   51  cat < abc.txt
+   52  cat abc.txt
+   53  history
+   54  history | grep uniq
+   55  history | grep uniq > uniq_result.txt
+   56  ls
+   57  cat uniq_result.txt
+   58  sort abc.tzt | uniq -c
+   59  ls
+   60  sort abc.txt | uniq -c
+   61  wc abc.txt
+   62  wc -l abc.txt
+   63  head abc.txt
+   64  history | grep echo
+   65  echo "this is my readme"
+   66  echo "this is my readme" > README.md
+   67  ls
+   68  cat README.md
+   69  cd ..
+   70  ls
+   71  git log
+   72  ls
+   73  git log --pretty=format:'%h &ad %s' --graph
+   74  git log --pretty=format:'%h %ad %s' --graph
+   75  vim ~/.gitconfig
+   76  cat ~~/,gitconfig
+   77  cat ~/.gitconfig
+   78  cd CS131
+   79  git hist
+   80  ls
+   81  vim README.md
+   82  git status
+   83  git add README.md
+   84  git commit -m "edit README"
+   85  git hist
+   86  git checkout 823f885
+   87  cat README.md
+   88  git checkout main
+   89  cat README.d
+   90  cat README.md
+   91  git staus
+   92  git checkout main
+   93  vim README.md
+   94  cat README.md
+   95  git stsus
+   96  git status
+   97  git checkout README.md
+   98  cat README.md
+   99  vim READE.md
+  100  ls
+  101  vim README.md
+  102  git add README.md
+  103  git status
+  104  git reset HEAD README.md
+  105  git status
+  106  cat README.md
+  107  ls
+  108  cd CS131
+  109  ls
+  110  mkdir ws2
+  111  ls
+  112  cd ws2
+  113  ls
+  114  cd ~ pwd
+  115  echo $HOME
+  116  cd ~ && pwd
+  117  id
+  118  cd ~
+  119  pwd
+  120  ls
+  121  cd CS131
+  122  ls
+  123  ls /proc/ | grep mem
+  124  ls /proc/ | grep cpu
+  125  head /proc/meminfo
+  126  head /proc/cpuinfo
+  127  cat /proc/cpuinfo
+  128  uname -m
+  129  grep flags /proc/cpuinfo
+  130  uname -m
+  131  grep "cpu MHz" /proc/cpuinfo
+  132  uname -a
+  133  cat /etc/os-release
+  134  /etc
+  135  ls
+  136  cat /etc
+  137  rm -r /ws2
+  138  rm -r ws2
+  139  ls
+  140  mkdir Worksheets
+  141  ls
+  142  cd Worksheets
+  143  ls
+  144  git pull
+  145  mkdir WS2
+  146  ls
+  147  cd WS2
+  148  ls
+  149  touch WS2.txt
+  150  ls
+  151  vim WS2.txt
+  152  ls
+  153  cat WS2.txt
+  154  vim WS2.txt
+  155  cat WS2.txt
+  156  history > cmds.log
+  157  ls
+  158  vim cmds.log
+  159  ls
+  160  cat cmds.log
+  161  cat WS2.txt
+  162  git add .
+  163  git commit -m "WS2 first commit"
+  164  git push
+  165  git clone https://github.com/GuadalupeRamirezLara/CS131.git
+  166  git status
+  167  git push
+  168  git status
+  169  git staus
+  170  git status
+  171  cd CS131
+  172  ls
+  173  git status
+  174  git add README.md
+  175  git commit -m "this is my commit on 2/10"
+  176  git hist
+  177  git reset --hard 29cb685
+  178  git hist
+  179  git reset --hard 303613a
+  180  git hist
+  181  git hist --all
+  182  git checkout -b newBranch
+  183  git status
+  184  ls
+  185  vim README.md
+  186  git add README.md
+  187  git commit -m "edit README"
+  188  git hist
+  189  git log
+  190  git checkout main
+  191  git status
+  192  cat README.md
+  193  git checkout newBranch
+  194  cat README.md
+  195  git status
+  196  git checkout main
+  197  git hit -all
+  198  git hist -all
+  199  git hist
+  200  git hist --all
+  201  git checkout mian
+  202  git checkout main
+  203  vim README.md
+  204  cat README.md
+  205  git add README.md
+  206  git commit -m "edit README(main)"
+  207  git hist --all
+  208  cat ~/.gitconfig
+  209  git checkout newBranch
+  210  git merge main
+  211  git merge --main
+  212  git merge main
+  213  git status
+  214  vim README.md
+  215  git add README.md
+  216  git commit -m "edit readme on branch newBranch s it shows branch name"
+  217  git merge main
+  218  git checkout main
+  219  vim README.md
+  220  cat README.md
+  221  git add README.md
+  222  git commit -m "removed last line"
+  223  git checkout newBranch
+  224  git merge main
+  225  vim README.MD
+  226  ls
+  227  vim README.md
+  228  git add README.md
+  229  git commit -m "fixed the conflict"
+  230  git merge main
+  231  git hit
+  232  git hist
+  233  git checkout main
+  234  git status
+  235  ls
+  236  cd sample1
+  237  ls
+  238  echo "show this text"
+  239  echo show this text2
+  240  echo *
+  241  echo "2 + 2 is $((2+2))"
+  242  echo "CS131(1,2,3)"
+  243  echo CS131{1,2,3}
+  244  echo CS13{1,2,3}
+  245  echo CS13{A,B,C}
+  246  echo $USER
+  247  echo USER
+  248  echo $SHELL
+  249  pwd
+  250  echo "$(pwd) has the following files: $(ls)"
+  251  pwd
+  252  ls
+  253  echo $(pwd) has the following files: $(ls)
+  254  echo $(pwd) has the f
+  255  ollowing files: $(ls)echo $(pwd) has the f
+  256  ollowing files: $(ls)
+  257  echo '$(pwd) has the following files: $(ls)'
+  258  echo "$(pwd) has the following files: \$(ls)"
+  259  echo "$(pwd) has the following files: $(ls)"
+  260  ls
+  261  cd CS131
+  262  ls
+  263  apt install python3-pip
+  264  sudo apt install python3-pip
+  265  --fix-missing
+  266  apt-get update
+  267  sudo apt-get
+  268  sudo apt-get update
+  269  pip install gdown
+  270  sudo apt install python3-pip
+  271  pip install gdown
+  272  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  273  pip install gdown
+  274  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  275  apt install gdown
+  276  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  277  gd~/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  278  python3 -m gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  279  ls
+  280  cat 2019-01-h1.csv
+  281  ls
+  282  cd CS131
+  283  ls
+  284  cd cs131
+  285  cd CS131
+  286  ls
+  287  cat 2019-01-h1.csv | less
+  288  grep '2019-01-02'
+  289  cd CS131
+  290  ls
+  291  grep "2019-01-02"
+  292  grep "2019-01-02" 2019-01-h1.csv
+  293  grep "2019-01-02" 2019-01-h1.csv | sort -h | uniq | head -3
+  294  ls
+  295  cd Worksheets
+  296  ls
+  297  mkdir WS3
+  298  ls
+  299  cd WS3
+  300  ls
+  301  touch T1_WS3.txt
+  302  ls
+  303  vim T1_WS3.txt
+  304  ls
+  305  cat T1_WS3.txt
+  306  mv T1_WS3.txt WS3.txt
+  307  ls
+  308  cat WS3.txt
+  309  grep "2019-01-02" 2019-01-h1.csv | cut -d, f8 | sort -h | uniq -c | head -3
+  310  grep "2019-01-02" 2019-01-h1.csv | cut -d, f8 | sort -
+  311  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f8 | sort -h | uniq -c | head -3
+  312  cd >>
+  313  cd ..
+  314  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f8 | sort 
+  315  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f8 | sort -h | uniq -c | head -3
+  316  cd CS131
+  317  ls
+  318  pwd
+  319  ls /etc
+  320  ls /proc | grep mem
+  321  ls /proc/ | grep cpu
+  322  head /prc/meminfo
+  323  head /proc/meminfo
+  324  head /proc/cpuinfo
+  325  uname -m
+  326  cat /proc/cpuinfo
+  327  cat /etc/shadow
+  328  cs sample1/
+  329  cd cample1/
+  330  ls
+  331  cd sorted_data.txt
+  332  toutch sample1.txt
+  333  touch sample1.txt
+  334  ls -l
+  335  id
+  336  chmod 600 sample1.txt
+  337  ls -s | grep sample1
+  338  ls -l | grep sample1
+  339  chmod 464 sample1.txt
+  340  ls -l | grep sampel1
+  341  ls -l | grep sample1
+  342  passwd
+  343  su
+  344  sudo password
+  345  sudo passwd
+  346  su
+  347  sudo /etc/shadow
+  348  sudo cat /etc/shadow
+  349  id
+  350  id | grep sudo
+  351  id | grep admin
+  352  su
+  353  id | grep sudo
+  354  sudo cat /etc/shadow
+  355  cd CS131
+  356  ls
+  357  cd sample1
+  358  ls
+  359  ls -l
+  360  sudo chown root: abc.txt
+  361  ls -l
+  362  ps
+  363  ps aux
+  364  ps aux | head -10
+  365  top
+  366  vim long.sh
+  367  cat long.sh
+  368  sh long.sh
+  369  vim long.sh
+  370  sh long.sh
+  371  sh long.sh >>result.txt
+  372  cat result.txt
+  373  sh long.sh >>result.txt &
+  374  ps
+  375  jobs
+  376  cat result.txt
+  377  fg #1
+  378  jobs
+  379  bg #1
+  380  jobs
+  381  ls
+  382  fg #1
+  383  cat result.txt
+  384  jobs
+  385  ps
+  386  LS
+  387  ls
+  388  cd CS131
+  389  ls
+  390  cat long.sh
+  391  cd sample1
+  392  ls
+  393  cat long.sh
+  394  sh long.sh > sults.txt &
+  395  jobs
+  396  ls
+  397  fg
+  398  jobs
+  399  rm sults.txt
+  400  ls
+  401  clear
+  402  sh long. sh > result.txt
+  403  jobs
+  404  sh long.sh >> result.txt
+  405  jobs
+  406  ls
+  407  sh long.sh >> results.txt &
+  408  jobs
+  409  ps -f | grep long
+  410  disown
+  411  jobs
+  412  ps -f | grep long
+  413  man disown
+  414  cat results.txt
+  415  ps -ef | grep long
+  416  kill -9 1100
+  417  ps -f | grep long
+  418  print onv
+  419  print env
+  420  printenv
+  421  echo $HOME
+  422  echo $SHELL
+  423  ls -a
+  424  .. 
+  425  .. CS131
+  426  cd ..
+  427  ls -a
+  428  less .bash_profile
+  429  cat .profile
+  430  vim .profile
+  431  cat .bashrc
+  432  vim .bashrc
+  433  head .bashrc
+  434  source ~/.bashrc
+  435  lll
+  436  crontab -e
+  437  vim crontab
+  438  crontab -e
+  439  cat crontab
+  440  crontab -e
+  441  crobtab -e
+  442  crontab -e
+  443  cat hi.txt
+  444  cd CS131/sample1
+  445  ls
+  446  vim sample2.txt
+  447  cat sample2.txt
+  448  cp sample2.txt
+  449  cp sample2.txt sample3.txt
+  450  echo "hello" >> sample3.txt
+  451  cat sample3.txt
+  452  diff -y sample2.txt sample3.txt
+  453  vim sample3.txt
+  454  diff -y sample2.txt sample3.txt
+  455  curl -o file.html https://www.google.com
+  456  ls
+  457  head -2 file.html
+  458  ls
+  459  cd CS131
+  460  ls
+  461  mkdir a1
+  462  ls
+  463  cd a1
+  464  touch cmds.log
+  465  ls
+  466  touch a1.txt
+  467  ls
+  468  cd ..
+  469  vim ~/.bashrc
+  470  cat .bashrc
+  471  l
+  472  w
+  473  cd CS131
+  474  ls
+  475  cd a1
+  476  mkdir FARE
+  477  ls
+  478  cd ..
+  479  head -n 5 2019-01-h1.csv
+  480  cd CS131
+  481  ls
+  482  grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > FARE/151.0-246.0.txt
+  483  a1
+  484  cd a1
+  485  ls
+  486  grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > FARE/151.0-246.0.txt
+  487  grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/151.0-246.0.txt
+  488  cd ..
+  489  ls
+  490  grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/151.0-246.0.txt
+  491  cd a1
+  492  ls
+  493  cd FARE
+  494  ls
+  495  cat 151.0-246.0.txt
+  496  cd ..
+  497  grep '^.*,193.0,239.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/193.0-239.0.txt
+  498  cd a1
+  499  cd FARE
+  500  ls
+  501  cd ..
+  502  ls
+  503  sum=$(paste -sd+ a1/FARE/151.0-246.0.txt | bc)
+  504  count=$(wc -l < a1/FARE/151.0-246.0.txt)
+  505  mean=$(echo "$sum / $count" | bc -l)
+  506  echo "/FARE/151.0-246.0.txt: $mean" >> a1.txt
+  507  cat a1.txt
+  508  sum=$(paste -sd+ /FARE/48.0-161.0.txt | bc)
+  509  sum=$(paste -sd+ FARE/151.0-246.0.txt | bc)
+  510  count=$(wc -l < FARE/151.0-246.0.txt)
+  511  mean=$(echo "$sum / $count" | bc -l)
+  512  echo "FARE/151.0-246.0.txt: $mean" >> a1.txt
+  513  cat a1.txt
+  514  vim a1.txt
+  515  cat a1.txt
+  516  sum=$(paste -sd+ FARE/193.0-239.0.txt | bc)
+  517  count=$(wc -l < FARE/193.0-239.0.txt)
+  518  mean=$(echo "$sum / $count" | bc -l)
+  519  echo "FARE/193.0-239.0.txt: $mean" >> a1.txt
+  520  cat a1.txt
+  521  cd ..
+  522  ls
+  523  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18 | sort -n | tail -n 1
+  524  grep '2019-01-10' 2019-01-h1.csv | head -n 5
+  525  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18 | grep -v '^$'
+  526  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18
+  527  cd CS131
+  528  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18 | sort -n | tail -n 1
+  529  grep '2019-01-10' 2019-01-h1.csv | head -n 5
+  530  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18 | grep -v '^$'
+  531  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18 | sed 's/,$//' | sort -n | tail -n 1
+  532  cd CS131
+  533  ls
+  534  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f8 | sort | uniq -c | sort -nr | head -3
+  535  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f18 | sort | uniq -c | sort -nr | head -5
+  536  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f8 | sort | uniq -c | sort -nr | head -3
+  537  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f18 | sort | uniq -c | sort -nr | tail -n 3
+  538  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f8 | sort | uniq -c | sort -nr | head
+  539  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f18 | sort | uniq -c | sort -nr | head
+  540  grep ',[3-9]\.[0-9]*,' 2019-01-h1.csv | cut -d',' -f9 | sort | uniq -c | sort -nr | head -n 10
+  541  grep ',[3-9]\.[0-9]*,' 2019-01-h1.csv | cut -d',' -f9 | sort | uniq | sort -nr | head 10
+  542  grep ',[3-9]\.[0-9]*,' 2019-01-h1.csv | cut -d',' -f9 | sort | uniq | sort -nr | head -10
+  543  grep ',[3-9]\.[0-9]*,' 2019-01-h1.csv | cut -d',' -f9 | sort | uniq -c | sort -nr | head -10
+  544  history > cmds.log
+  545  ls
+  546  cd a1
+  547  ls
+  548  cd ..
+  549  history > /a1/cmds.log
+  550  history > a1/cmds.log
+  551  cd a1
+  552  ls
+  553  vim cmds.log
+  554  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18 | sed 's/,$//' | sort -n | tail -n 1
+  555  cd ..
+  556  grep '2019-01-10' 2019-01-h1.csv | cut -d',' -f18 | sed 's/,$//' | sort -n | tail -n 1
+  557  history > a1/cdms.log
+  558  cd a1
+  559  vim cdms.log
+  560  cd ..
+  561  ls
+  562  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f18 | sort | uniq -c | sort -nr | head
+  563  cd a1
+  564  vim cmds.log
+  565  cd ..
+  566  history > a1/cdms.log
+  567  cd a1
+  568  vim cdms.log
+  569  cat cdms.log
+  570  ls
+  571  cat a1.txt
+  572  vim a1.txt
+  573  cat a1.txt
+  574  vim a1.txt
+  575  l
+  576  w
+  577  grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/151.0-246.0.txt
+  578  cd ..
+  579  grep '^.*,151.0,246.0,' 2019-01-h1.csv | cut -d ',' -f 11 > a1/FARE/151.0-246.0.txt
+  580  cd aa1
+  581  cd a1
+  582  ls
+  583  cd ..
+  584  grep "2019-01-02" 2019-01-h1.csv | cut -d, -f18 | sort | uniq -c | sort -nr | head
+  585  ls
+  586  history > cdms.log

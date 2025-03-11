@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Prog to output a system info page
+
+title="System Information Report for $HOSTNAME"
+timestamp="$(date)"
+echo "<html>
+	<head>
+		<title>$title</title>
+	</head>
+	<body>
+		<h1>$title</h1>
+		<p>$timestamp</p>
+	</body>
+</html>"

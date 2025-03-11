@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# This is a script to automatically add and commit repo changes
+
+set -x
+
+PATH=$(pwd)  # get path of repo
+
+# error if no git repo found (exit code to show error)
+if [ ! -d "$PATH/.git" ]; then
+        echo "ERROR: git repo not found for: $PATH"
+        exit 1
+fi
+
+# method to check for updates in repo (return 1 if error, 0 if no error)
+checkForUpdates() {
+        echo "CHECKING FOR:repo updates..."
+
+        if [[ $(git status --porcelain) ]]; then
+                echo "NEW: updates found."
+                return 0
+        else
+                echo "LATEST: no updates found."
+                return 1
+        fi
+}
+
+# method to commit changes
+commitUpdates() {
+        # get modfiles using porcelain added & mod files (awk to print filename)
+        MODFILES=$(git status --porcelain | grep -E "^[AM]" | awk '{print $2}')
+
+        for FILE in $MODFILES; do
+                echo "AUTO-COMMIT: committing $FILE updates"
+                git add "$FILE"
+                git commit -m "auto-committing updates for: $FILE"
+                echo "AUTO-COMMIT: committed $FILE updates"
+        done
+}
+
+# file to store latest commit time (for callback)
+COMMTIMEFILE="$PATH/.autogit_latest_commit_time_file"
+touch "$COMMTIMEFILE"
+
+# checking for updates (12hr interval)
+while true; do
+    checkForUpdates
+    if [ $? -eq 0 ]; then
+        CURRTIME=$(date +%s)
+        LATESTCOMMTIME=$(cat "$COMMTIMEFILE")# get latest commit time from file
+        TIME_DIFF=$((CURRTIME - LATESTCOMMTIME))# check time difference since latest commit
+        
+        # check if 12hrs passed, commit, update time in file
+        if [ $TIME_DIFF -ge 43200 ]; then  # 43200 seconds = 12 hours
+                echo "UPDATE: committing changes every 12hrs..."
+                commitUpdates
+                echo $CURRTIME > "$COMMTIMEFILE"
+        fi
+    fi
+    # calling sleep for 180 seconds (3 minutes) before checking again
+    sleep 180
+done
+
