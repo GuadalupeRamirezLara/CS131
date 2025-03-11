@@ -1,0 +1,3 @@
+this is a sample file for A1 gitauto
+
+this is the edit after adding it to staging area
