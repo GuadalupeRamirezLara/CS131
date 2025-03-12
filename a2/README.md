@@ -20,13 +20,19 @@ This command works to check the additions and updates tracked with git, meaning 
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git add README.md
 ### Check status
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git status
+
 On branch main
+
 Your branch is ahead of 'origin/main' by 1 commit.
+  
   (use "git push" to publish your local commits)
 
+
 Changes to be committed:
+  
   (use "git restore --staged <file>..." to unstage)
         new file:   README.md
+
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
