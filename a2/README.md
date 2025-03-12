@@ -47,12 +47,19 @@ guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
 
 ### Call shell tool to stage and commit edits
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ ./gitauto.sh ..
+
 CHECKING: repo updates...
+
 NEW: updates found.
+
 AUTO-COMMIT: committing a2/README.md updates
+
 [main 5840344] auto-committing updates for: a2/README.md
+
  17 files changed, 1323 insertions(+), 32 deletions(-)
+ 
  create mode 100644 .gitignore
+ 
  create mode 160000 Worksheets/WS2/CS131
  create mode 100755 a2/gitauto.sh
  create mode 100644 cdms.log
@@ -73,7 +80,9 @@ LATEST: updates committed. Ready to push.
 
 ### Edit again (new)
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
+
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ ./gitauto.sh ..
+
 CHECKING: repo updates...
 NEW: updates found.
 AUTO-COMMIT: committing all updates
