@@ -32,7 +32,6 @@ Changes to be committed:
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-      
         ../.gitignore
         
         ../Worksheets/WS2/CS131/
