@@ -32,6 +32,7 @@ Changes to be committed:
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
+        
         ../.gitignore
         
         ../Worksheets/WS2/CS131/
@@ -51,7 +52,6 @@ Untracked files:
         ../sorted_data.txt
         
         ../temp2/
-
 
 ### Edit README.md after first time adding it to git
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
@@ -105,7 +105,6 @@ AUTO-COMMIT: committed a2/README.md updates
 
 LATEST: updates committed. Ready to push.
 
-
 ### Edit again (new)
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
 
@@ -124,7 +123,6 @@ AUTO-COMMIT: committing all updates
 AUTO-COMMIT: committed all updates
 
 LATEST: updates committed. Ready to push.
-
 
 ### Check git status
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git status
