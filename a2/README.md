@@ -5,7 +5,7 @@ Author: Guadalupe Ramirez Lara, CS131
 My shell tool "gitauto.sh" is meant to make maintaining your git repo up-to-date a bit easier.
 
 ## What this command does:
-This shell script automatically adds updated files to the staging area and commits them.
+This shell script automatically adds new repo changes to the staging area and commits them.
 
 ## Why/When this command is useful:
 While you would usually have to "git add <file/directory name>" to add it to the staging area, then add a commit message for each update to your repo, this tool helps save a bit of hassle when pushing updates.
@@ -14,7 +14,7 @@ While you would usually have to "git add <file/directory name>" to add it to the
 To use the command, add the .gitauto.sh file to a directory  and give it permission to be executed with "chmod 755 gitauto.sh". Because this file takes the input of a directory(that should include a git repo), type "./gitauto.sh <directory of repo>" to use the command.
 
 ## Examle of command use:
-This command works to check the additions and updates tracked with git, meaning a file can be created and only has to be added to the repo once, and after that, you can call "./gitauto.sh <directory of repo>" for any update. This tool will not push untracked files.
+This command works to check the additions and updates tracked with git, meaning a file can be created or updated and after that, you can call "./gitauto.sh <directory of repo>" for any repo updates.
 
 ### Added README.md to staging area for first time
 Command:   git add README.md
@@ -29,29 +29,6 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
        
         new file:   README.md
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        
-        ../.gitignore
-        
-        ../Worksheets/WS2/CS131/
-        
-        gitauto.sh
-        
-        ../cdms.log
-        
-        ../cmds.log
-        
-        ../gitauto
-        
-        ../sample1.txt
-        
-        ../sample1/
-        
-        ../sorted_data.txt
-        
-        ../temp2/
 
 ### Edit README.md after first time adding it to git
 Command:  vim README.md
