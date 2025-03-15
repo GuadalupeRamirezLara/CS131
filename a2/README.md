@@ -1,5 +1,5 @@
 # README for A2-Mini Project: gitauto.sh
-Author: Guadalupe Ramirez Lara
+Author: Guadalupe Ramirez Lara, CS131
 
 ## Brief explanation:
 My shell tool "gitauto.sh" is meant to make maintaining your git repo up-to-date a bit easier.
@@ -19,6 +19,7 @@ This command works to check the additions and updates tracked with git, meaning 
 
 ### Added README.md to staging area for first time
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git add README.md
+
 ### Check status
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git status
 On branch main
@@ -27,19 +28,30 @@ Your branch is ahead of 'origin/main' by 1 commit.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
+       
         new file:   README.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
+        
         ../.gitignore
+        
         ../Worksheets/WS2/CS131/
+        
         gitauto.sh
+        
         ../cdms.log
+        
         ../cmds.log
+        
         ../gitauto
+        
         ../sample1.txt
+        
         ../sample1/
+        
         ../sorted_data.txt
+        
         ../temp2/
 
 ### Edit README.md after first time adding it to git
@@ -47,46 +59,80 @@ guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
 
 ### Call shell tool to stage and commit edits
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ ./gitauto.sh ..
+
 CHECKING: repo updates...
+
 NEW: updates found.
+
 AUTO-COMMIT: committing a2/README.md updates
+
 [main 5840344] auto-committing updates for: a2/README.md
+
  17 files changed, 1323 insertions(+), 32 deletions(-)
+ 
  create mode 100644 .gitignore
+ 
  create mode 160000 Worksheets/WS2/CS131
+ 
  create mode 100755 a2/gitauto.sh
+ 
  create mode 100644 cdms.log
+ 
  create mode 100644 cmds.log
+ 
  create mode 100755 gitauto
+ 
  create mode 100644 sample1.txt
+ 
  create mode 100644 sample1/README.md
+ 
  create mode 100644 sample1/awkfile
+ 
  create mode 100644 sample1/file.html
+ 
  create mode 100644 sample1/long.sh
+ 
  create mode 100644 sample1/newfile.html
+ 
  create mode 100755 sample1/sample
+ 
  create mode 100644 sample1/sample.html
+ 
  create mode 100644 sorted_data.txt
+
  create mode 100644 temp2/sample.txt
+
 AUTO-COMMIT: committed a2/README.md updates
+
 LATEST: updates committed. Ready to push.
 
 ### Edit again (new)
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ vim README.md
+
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ ./gitauto.sh ..
+
 CHECKING: repo updates...
+
 NEW: updates found.
+
 AUTO-COMMIT: committing all updates
+
 [main 58fea40] auto-committed all updates
+
  1 file changed, 5 insertions(+), 11 deletions(-)
+
 AUTO-COMMIT: committed all updates
+
 LATEST: updates committed. Ready to push.
 
 ### Check git status
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$ git status
+
 On branch main
+
 Your branch is ahead of 'origin/main' by 2 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+
 guadalupe_ramirezlara@instance-20250202-003141:~/CS131/a2$  
