@@ -19,7 +19,7 @@ This command works to check the additions and updates tracked with git, meaning 
 ### Added README.md to staging area for first time
 Command:   git add README.md
 
-### Check status
+### Check git status
 Command:   git status
 On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
@@ -28,7 +28,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
        
-        new file:   README.md
+new file:   README.md
 
 ### Edit README.md after first time adding it to git
 Command:  vim README.md
