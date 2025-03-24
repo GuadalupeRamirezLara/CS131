@@ -11,7 +11,7 @@ This shell script automatically adds new repo changes to the staging area and co
 While you would usually have to "git add <file/directory name>" to add it to the staging area, then add a commit message for each update to your repo, this tool helps save a bit of hassle when pushing updates.
  
 ## How to use command:
-To use the command, add the .gitauto.sh file to a directory  and give it permission to be executed with "chmod 755 gitauto.sh". Because this file takes the input of a directory(that should include a git repo), type "./gitauto.sh <directory of repo>" to use the command.
+To use the command, add the .gitauto.sh file to a directory  and give it permission to be executed with "chmod 755 gitauto.sh". Because this file takes the input of a directory(that should include a git repo), type "./gitauto.sh directory-of-repo" to use the command.
 
 ## Examle of command use:
 This command works to check the additions and updates tracked with git, meaning a file can be created or updated and after that, you can call "./gitauto.sh <directory of repo>" for any repo updates.
