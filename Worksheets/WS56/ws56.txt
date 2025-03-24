@@ -70,7 +70,9 @@ Task 2 awk:
 
 1) Using awk, identify the frequency of the tip amounts from the customers who paid more than and equal to US$ 10.0 of the total amount. The output should be stored in "ws56.txt. Each line should look like "29.46 4", where (the tip amount) and (the frequency count) are separated by a single space.
 
-NOTE: For this task, I made a TEMP-2019-01-h1.csv file without the first line of the normal 2019-01-h1.csv(removed the line with the column names) for the command to work. I also put the output of both commands in two temporary file named 'tip-avg.csv' and 'most-common.csv' because the output was quite long, and I wanted to keep it organized. I hope that was ok! I will also push the two files to my git repo in case you'd like to see that output!
+NOTE: For this task, I made a TEMP-2019-01-h1.csv file without the first line of the normal 2019-01-h1.csv(removed the line with the column names) for the command to work. 
+I also put the output of both commands in two temporary file named 'tip-avg.csv' and 'most-common.csv' because the output was quite long, and I wanted to keep it organized.
+I hope that was ok! I will also push the two files to my git repo in case you'd like to see that output!
 
     Command(s):
 	1: tail -n +2 2019-01-h1.csv > TEMP-2019-01-h1.csv
