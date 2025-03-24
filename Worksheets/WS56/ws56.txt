@@ -1,0 +1,143 @@
+Task 1 sed:
+
+1) Collect the lines with Vendor 2.0 (vendorid) into the file named "vendor2.csv", using sed. (You do not need to push this file to the Github repo. Just show the result of "wc vendor2.csv")
+
+    Command(s):
+	1: sed -n '/^2.0,/p' 2019-01-h1.csv > vendor2.csv
+
+	2: head -n5 vendor2.csv
+
+	3: wc vendor2.csv
+
+    Output:
+	1: (no output for first command)
+
+	2: (output below)
+	2.0,"2018-12-21 13:48:30.000000","2018-12-21 13:52:40.000000",3.0,0.0,1.0,N,236.0,236.0,1.0,4.5,0.5,0.5,0.0,0.0,0.3,5.8,
+	2.0,"2018-11-28 15:52:25.000000","2018-11-28 15:55:45.000000",5.0,0.0,1.0,N,193.0,193.0,2.0,3.5,0.5,0.5,0.0,0.0,0.3,7.55,
+	2.0,"2018-11-28 15:56:57.000000","2018-11-28 15:58:33.000000",5.0,0.0,2.0,N,193.0,193.0,2.0,52.0,0.0,0.5,0.0,0.0,0.3,55.55,
+	2.0,"2018-11-28 16:25:49.000000","2018-11-28 16:28:26.000000",5.0,0.0,1.0,N,193.0,193.0,2.0,3.5,0.5,0.5,0.0,5.76,0.3,13.31,
+	2.0,"2018-11-28 16:29:37.000000","2018-11-28 16:33:43.000000",5.0,0.0,2.0,N,193.0,193.0,2.0,52.0,0.0,0.5,0.0,0.0,0.3,55.55,
+
+	3: (output below)
+	  2206417   6619251 272950834 vendor2.csv
+
+2) Remove all colons (:), double quotes ("), and hyphens (-) from the ORIGINAL 2019-1-h1.csv file and save it as "no-separators.csv". (You do not need to push the output with all entries to the Github repo. Just push the result of "head -10 no-separators.csv")
+
+    Command(s):
+	1: sed -e 's/://g' -e 's/"//g' -e 's/-//g' 2019-01-h1.csv > no-separators.csv
+
+	2: head -10 no-separators.csv
+
+    Output:
+	1: (no output for first command)
+
+	2: (output below)
+	vendorid,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distance,ratecodeid,store_and_fwd_flag,pulocationid,dolocationid,payment_type,fare_amount,extra,mta_tax,tip_amount,tolls_amount,improvement_surcharge,total_amount,congestion_surcharge
+	1.0,20190101 004640.000000,20190101 005320.000000,1.0,1.5,1.0,N,151.0,239.0,1.0,7.0,0.5,0.5,1.65,0.0,0.3,9.95,
+	1.0,20190101 005947.000000,20190101 011859.000000,1.0,2.6,1.0,N,239.0,246.0,1.0,14.0,0.5,0.5,1.0,0.0,0.3,16.3,
+	2.0,20181221 134830.000000,20181221 135240.000000,3.0,0.0,1.0,N,236.0,236.0,1.0,4.5,0.5,0.5,0.0,0.0,0.3,5.8,
+	2.0,20181128 155225.000000,20181128 155545.000000,5.0,0.0,1.0,N,193.0,193.0,2.0,3.5,0.5,0.5,0.0,0.0,0.3,7.55,
+	2.0,20181128 155657.000000,20181128 155833.000000,5.0,0.0,2.0,N,193.0,193.0,2.0,52.0,0.0,0.5,0.0,0.0,0.3,55.55,
+	2.0,20181128 162549.000000,20181128 162826.000000,5.0,0.0,1.0,N,193.0,193.0,2.0,3.5,0.5,0.5,0.0,5.76,0.3,13.31,
+	2.0,20181128 162937.000000,20181128 163343.000000,5.0,0.0,2.0,N,193.0,193.0,2.0,52.0,0.0,0.5,0.0,0.0,0.3,55.55,
+	1.0,20190101 002128.000000,20190101 002837.000000,1.0,1.3,1.0,N,163.0,229.0,1.0,6.5,0.5,0.5,1.25,0.0,0.3,9.05,
+	1.0,20190101 003201.000000,20190101 004539.000000,1.0,3.7,1.0,N,229.0,7.0,1.0,13.5,0.5,0.5,3.7,0.0,0.3,18.5,
+
+3) From no-separators.csv, remove the fractional parts of all numbers. Save it as "no-fractions.csv". (You do not need to push the output with all entries to the Github repo. Just show the result of "head -10 no-fractions.csv")
+
+    Command(s):
+	1: sed 's/\([0-9]*\)\.[0-9]*/\1/g' no-separators.csv > no-fractions.csv
+
+	2: head -10 no-fractions.csv
+
+    Output:
+	1: (no output for first command) 
+
+	2: (output below)
+	vendorid,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distance,ratecodeid,store_and_fwd_flag,pulocationid,dolocationid,payment_type,fare_amount,extra,mta_tax,tip_amount,tolls_amount,improvement_surcharge,total_amount,congestion_surcharge
+	1,20190101 004640,20190101 005320,1,1,1,N,151,239,1,7,0,0,1,0,0,9,
+	1,20190101 005947,20190101 011859,1,2,1,N,239,246,1,14,0,0,1,0,0,16,
+	2,20181221 134830,20181221 135240,3,0,1,N,236,236,1,4,0,0,0,0,0,5,
+	2,20181128 155225,20181128 155545,5,0,1,N,193,193,2,3,0,0,0,0,0,7,
+	2,20181128 155657,20181128 155833,5,0,2,N,193,193,2,52,0,0,0,0,0,55,
+	2,20181128 162549,20181128 162826,5,0,1,N,193,193,2,3,0,0,0,5,0,13,
+	2,20181128 162937,20181128 163343,5,0,2,N,193,193,2,52,0,0,0,0,0,55,
+	1,20190101 002128,20190101 002837,1,1,1,N,163,229,1,6,0,0,1,0,0,9,
+	1,20190101 003201,20190101 004539,1,3,1,N,229,7,1,13,0,0,3,0,0,18,
+
+Task 2 awk:
+
+1) Using awk, identify the frequency of the tip amounts from the customers who paid more than and equal to US$ 10.0 of the total amount. The output should be stored in "ws56.txt. Each line should look like "29.46 4", where (the tip amount) and (the frequency count) are separated by a single space.
+
+NOTE: For this task, I made a TEMP-2019-01-h1.csv file without the first line of the normal 2019-01-h1.csv(removed the line with the column names) for the command to work. I also put the output of both commands in two temporary file named 'tip-avg.csv' and 'most-common.csv' because the output was quite long, and I wanted to keep it organized. I hope that was ok! I will also push the two files to my git repo in case you'd like to see that output!
+
+    Command(s):
+	1: tail -n +2 2019-01-h1.csv > TEMP-2019-01-h1.csv
+
+	2: head -10 TEMP-2019-01-h1.csv
+
+	3:  awk -F, 'BEGIN {OFS=" "} $17 >= 10.0 {tips[$14]++} END {for (tip in tips) print tip, tips[tip]}' TEMP-2019-01-h1.csv > tip-avg.csv
+	
+	4:  head -10 tip-avg.csv 
+
+    Output:
+	1: (no output for first command)
+	
+	2: (output below)
+	1.0,"2019-01-01 00:46:40.000000","2019-01-01 00:53:20.000000",1.0,1.5,1.0,N,151.0,239.0,1.0,7.0,0.5,0.5,1.65,0.0,0.3,9.95,
+	1.0,"2019-01-01 00:59:47.000000","2019-01-01 01:18:59.000000",1.0,2.6,1.0,N,239.0,246.0,1.0,14.0,0.5,0.5,1.0,0.0,0.3,16.3,
+	2.0,"2018-12-21 13:48:30.000000","2018-12-21 13:52:40.000000",3.0,0.0,1.0,N,236.0,236.0,1.0,4.5,0.5,0.5,0.0,0.0,0.3,5.8,
+	2.0,"2018-11-28 15:52:25.000000","2018-11-28 15:55:45.000000",5.0,0.0,1.0,N,193.0,193.0,2.0,3.5,0.5,0.5,0.0,0.0,0.3,7.55,
+	2.0,"2018-11-28 15:56:57.000000","2018-11-28 15:58:33.000000",5.0,0.0,2.0,N,193.0,193.0,2.0,52.0,0.0,0.5,0.0,0.0,0.3,55.55,
+	2.0,"2018-11-28 16:25:49.000000","2018-11-28 16:28:26.000000",5.0,0.0,1.0,N,193.0,193.0,2.0,3.5,0.5,0.5,0.0,5.76,0.3,13.31,
+	2.0,"2018-11-28 16:29:37.000000","2018-11-28 16:33:43.000000",5.0,0.0,2.0,N,193.0,193.0,2.0,52.0,0.0,0.5,0.0,0.0,0.3,55.55,
+	1.0,"2019-01-01 00:21:28.000000","2019-01-01 00:28:37.000000",1.0,1.3,1.0,N,163.0,229.0,1.0,6.5,0.5,0.5,1.25,0.0,0.3,9.05,
+	1.0,"2019-01-01 00:32:01.000000","2019-01-01 00:45:39.000000",1.0,3.7,1.0,N,229.0,7.0,1.0,13.5,0.5,0.5,3.7,0.0,0.3,18.5,
+	1.0,"2019-01-01 00:57:32.000000","2019-01-01 01:09:32.000000",2.0,2.1,1.0,N,141.0,234.0,1.0,10.0,0.5,0.5,1.7,0.0,0.3,13.0,
+
+	3: (no output for second command)
+
+	4: (output below)
+	9.34 2
+	22.5 7
+	9.75 189
+	5.34 624
+	1.75 23767
+	1.34 57
+	5.75 842
+	22.6 2
+	1.35 101
+	9.35 244
+2) Find the 20 most common tips in the entire file. This result should be saved to "ws56.txt" by listing the 20 lines in descending order.
+
+    Command(s):
+	1: sort -nr tip-avg.csv | head -20 > most-common.csv
+   
+	2: cat most-common.csv 
+    Output:
+	1: (no output for first command)
+
+	2: (output below) 
+	787.25 1
+	421.0 1
+	400.0 1
+	333.33 1
+	296.7 1
+	246.0 1
+	222.22 1
+	220.0 1
+	212.5 1
+	212.0 1
+	208.0 1
+	203.0 1
+	202.0 1
+	200.0 4
+	177.54 1
+	163.33 1
+	159.0 1
+	150.0 4
+	149.3 1
+	145.0 1 
+
+
