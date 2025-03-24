@@ -1,0 +1,14 @@
+ 1296  cd CS131
+ 1297  mkdir WS56
+ 1298  cs Worksheets/WS56/
+ 1309  sed -e 's/://g' -e 's/"//g' -e 's/-//g' 2019-01-h1.csv > no-separators.csv
+ 1310  head -10 no-separators.csv
+ 1332  sed 's/\([0-9]*\)\.[0-9]*/\1/g' no-separators.csv > no-fractions.csv
+ 1333  head -10 no-fractions.csv
+ 1342  tail -n +2 2019-01-h1.csv > TEMP-2019-01-h1.csv
+ 1353  head -10 TEMP-2019-01-h1.csv 
+ 1359  awk -F, 'BEGIN {OFS=" "} $17 >= 10.0 {tips[$14]++} END {for (tip in tips) print tip, tips[tip]}' TEMP-2019-01-h1.csv > tip-avg.csv
+ 1360  head -10 tip-avg.csv 
+ 1365  sort -nr tip-avg.csv | head -20 > most-common.csv
+ 1367  cat most-common.csv 
+ 1388  history > cmnd.log
