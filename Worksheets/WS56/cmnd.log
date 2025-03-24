@@ -1,6 +1,6 @@
- 1296  cd CS131
- 1297  mkdir WS56
- 1298  cs Worksheets/WS56/
+ 1296  ed -n '/^2.0,/p' 2019-01-h1.csv > vendor2.csv
+ 1297  head -n5 vendor2.csv
+ 1298  wc vendor2.csv
  1309  sed -e 's/://g' -e 's/"//g' -e 's/-//g' 2019-01-h1.csv > no-separators.csv
  1310  head -10 no-separators.csv
  1332  sed 's/\([0-9]*\)\.[0-9]*/\1/g' no-separators.csv > no-fractions.csv
