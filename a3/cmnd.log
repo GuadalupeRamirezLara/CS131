@@ -1,0 +1,42 @@
+ 1318  cd CS131/a3/
+ 1319  ls
+ 1320  vim grader.awk
+ 1321  vim grades.csv 
+ 1322  vim grader.awk
+ 1323  awk -f grader.awk grades.csv
+ 1324  cat grader.awk
+ 1325  vim grader.awk
+ 1326  awk -f grader.awk grades.csv
+ 1327  cat grader.awk
+ 1328  vim grader.awk
+ 1329  awk -f grader.awk grades.csv
+ 1330  cat grader.awk
+ 1331  vim grader.awk
+ 1332  cat grades.csv 
+ 1333  vim grader.awk
+ 1334  awk -f grader.awk grades.csv
+ 1335  vim grader.awk
+ 1336  awk -f grader.awk grades.csv
+ 1337  vim grader.awk
+ 1338  awk -f grader.awk grades.csv
+ 1339  vim grader.awk
+ 1340  awk -f grader.awk grades.csv
+ 1341  cat grades.csv 
+ 1342  cat grader.awk
+ 1343  vim grader.awk
+ 1344  awk -f grader.awk grades.csv
+ 1345  cat grader.awk
+ 1346  vim grader.awk
+ 1347  awk -f grader.awk grades.csv
+ 1348  cd ..
+ 1349  git status
+ 1350  cd a3
+ 1351  awk -f grader.awk grades.csv > a3.txt
+ 1352  ls
+ 1353  cat a3.txt
+ 1354  vim grader.awk
+ 1355  awk -f grader.awk grades.csv
+ 1356  awk -f grader.awk grades.csv > a3.txt
+ 1357  cat a3.txt
+ 1358  git status
+ 1359  history > cmnd.log

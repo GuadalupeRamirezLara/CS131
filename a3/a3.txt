@@ -1,0 +1,32 @@
+101 Student name:  Alice Total score:  253 Average score: 84.3333 Status: Pass
+102 Student name:  Bob Total score:  246 Average score: 82 Status: Pass
+103 Student name:  Charlie Total score:  270 Average score: 90 Status: Pass
+104 Student name:  David Total score:  195 Average score: 65 Status: Fail
+105 Student name:  Eve Total score:  265 Average score: 88.3333 Status: Pass
+106 Student name:  Alice Total score:  300 Average score: 100 Status: Pass
+107 Student name:  Bob Total score:  0 Average score: 0 Status: Fail
+108 Student name:  Lupita Total score:  285 Average score: 95 Status: Pass
+109 Student name:  Lupe Total score:  180 Average score: 60 Status: Fail
+110 Student name:  Guadalupe Total score:  175 Average score: 58.3333 Status: Fail
+111 Student name:  Ian Total score:  165 Average score: 55 Status: Fail
+112 Student name:  Jareth Total score:  145 Average score: 48.3333 Status: Fail
+113 Student name:  Harsen Total score:  285 Average score: 95 Status: Pass
+114 Student name:  Sebas Total score:  120 Average score: 40 Status: Fail
+115 Student name:  Lupe Total score:  255 Average score: 85 Status: Pass
+116 Student name:  Guadalupe Total score:  300 Average score: 100 Status: Pass
+117 Student name:  Mark Total score:  0 Average score: 0 Status: Fail
+118 Student name:  Paul Total score:  180 Average score: 60 Status: Fail
+119 Student name:  lily Total score:  231 Average score: 77 Status: Pass
+120 Student name:  Tian Total score:  269 Average score: 89.6667 Status: Pass
+121 Student name:  Daniel Total score:  271 Average score: 90.3333 Status: Pass
+122 Student name:  Riccardo Total score:  210 Average score: 70 Status: Pass
+123 Student name:  Max Total score:  260 Average score: 86.6667 Status: Pass
+124 Student name:  Vesta Total score:  273 Average score: 91 Status: Pass
+125 Student name:  Danny Total score:  300 Average score: 100 Status: Pass
+126 Student name:  Lewis Total score:  150 Average score: 50 Status: Fail
+127 Student name:  Milton Total score:  225 Average score: 75 Status: Pass
+128 Student name:  Hamil Total score:  210 Average score: 70 Status: Pass
+
+
+Lowest Student:  Mark  :  0
+Highest Student:  Danny  :  300
