@@ -1,7 +1,7 @@
 # Mini-Project Preparation Worksheet (ws9)
 
 ### Group Number and Members
- Group 5: Arnav Chawla Guadalupe Ramirez Lara
+ Group 5: Arnav Chawla, Guadalupe Ramirez Lara
 
 ## Title of the Project
 Predicting Wine Quality Based on Physicochemical Properties
