@@ -1,0 +1,20 @@
+ 79 mkdir a5
+ 80 cd a5
+ 81 mkdir scripts plots
+ 82 wget  https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv -O winequality.csv
+ 83 cd a5
+ 84 ls
+ 85 wc -l winequality.csv
+ 86 head -1 winequality.csv | awk -F';' '{print NF}'
+ 87 head -1 winequality.csv
+ 88 head -1 winequality.csv
+ 89 tail -n +2 winequality.csv | awk -F';' '{sum+=$11} END {print "Mean alcohol: ", sum/NR}'
+ 90 nano summary_stats.sh
+ 91 chmod +x summary_stats.sh
+ 92 ./summary_stats.sh
+ 93 ./summary_stats.sh > output_metadata.txt
+ 94 pyspark
+ 95 pip install pyspark
+ 96 python3 wine_spark_analysis.py
+ 97 python3 wine_spark_analysis.py
+ 98 history > cmnds.log
