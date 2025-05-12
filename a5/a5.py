@@ -69,6 +69,7 @@ def analyze_wine(file_path, wine_type):
     summary = model.evaluate(testDF)
     print(f"The RMSE value is = {rmse:.4f}")
     print(f"RMSE (via model summary): {summary.rootMeanSquaredError:.4f}")
+    print(f"R²: {summary.r2:.3f}")
 
     # importances
     print("\nFeature Coefficients:")
